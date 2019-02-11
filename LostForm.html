@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Form for Lost item</title>
+<style type="text/css">
+body{background-image:url("bbms1.jpeg"); background-repeat:no-repeat; background-position:130px 90px; 
+background-size:90%; background-attachment:fixed; margin-left:10%; margin-right:10%;}
+a:link{color:#000000; text-decoration:none;}
+a:visited{color:#000000; text-decoration:none;}
+a:hover{color:#0000ff; text-decoration:underline;}
+footer {background: #aaa;color:white;}
+</style>
+<script src="jquery-3.2.0.min.js"></script>
+<script src="jquery.validate.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#myformr").validate({
+rules:{
+   name:{required:true},
+   mymail:{required:true,
+   email:true},
+   phone:{required:true,
+   minlength:10},
+   aadhar:{required:true,
+   length:12}
+   blood:{required:true},
+   },
+Messages:{
+   name:{required:"Please enter your name"},
+   mymail:{required:"Please enter an email address"},
+   mymail:{email:"Please enter the correct email address"},
+   phone:{required:"Please enter the phone number"},
+   aadhar:{required:"Please enter the aadhar card number"},
+   blood:{required:"Please enter the blood group"}
+  }
+});
+});
+</script>
+</head>
+<body>
+<br>
+<header><h1><center><b>Form for Lost Item</b></center></h1>
+<br><br><br>
+<form id="myformr" method="post" action="register.php">
+<font size="4"><b>Full Name:</b> <input type="text" name="name"><br><br><br>
+<b>Contact Number:</b> <select name="dropdown">
+<option value="+91">+91</option>
+</select> &nbsp;
+<input type="text" name="phone" maxlength="10"><br>
+<b>Select Item Type:</b> <select name="dropdown">
+<option value="1">Bags/ Backpacks</option>
+<option value="2">Book(s)</option>
+<option value="3">Camera</option>
+<option value="4">Cash</option>
+<option value="5">Cell Phone</option>
+<option value="6">Cheque/Chequebook</option>
+<option value="7">Credit/Debit/any smart card</option>
+<option value="8">Electronics</option>
+<option value="9">Eyeglasses</option>
+<option value="10">Jewellery</option>
+<option value="11">Aadhar card/License/any other ID</option>
+<option value="12">Other legal documents</option>
+<option value="13">Musical instrument</option>
+<option value="14">Sports equipment</option>
+<option value="15">Wallet</option>
+<option value="16">Watch</option>
+</select> &nbsp;
+<br><br><br>
+<b>Email Id:</b> <input type="text" name="mymail" size="30">
+<br><br><br>
+<b>Upload Image Of The Item</b> &nbsp;<input type="file" name="fileupload" accept="image/*" />
+<br><br><br>
+<input type="submit" name="submit" value="Submit" /></font>
+<br><br><br><br>
+
+<p><font size="4"><b><center> <a href="index.html">Home</a>
+</body>
+</html>
